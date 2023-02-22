@@ -33,7 +33,7 @@ class ClassComponent extends Component {
         super(props);
         
         this.state = {
-            counter: 0,
+            counter: 1,
         }
 
         this.localClickFunction = this.localClickFunction.bind(this);
