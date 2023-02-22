@@ -1,14 +1,23 @@
 // Component Example
 
 // ====== IMPORTS ======
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 
 // ====== DEFINITIONS ======
 
 function FunctionalComponent (props) {
 
+    // Setup a counter
+    const [count, setCount] = useState(1);
+
+    function countUp () {
+        setCount(count + 1);
+        console.log(count + ' times');
+    }
+
     function localClickFunction (title) {
         console.log('You clicked a ' + title)
+        countUp();
     }
 
     return (
