@@ -28,11 +28,20 @@ class ClassComponent extends Component {
         }
 
         this.localClickFunction = this.localClickFunction.bind(this);
+        this.countUp = this.countUp.bind(this);
 
+    }
+
+    countUp() {
+        this.setState({
+            counter: this.state.counter + 1
+        });
     }
 
     localClickFunction(title) {
         console.log('You clicked a ' + title);
+        console.log('Counter: ' + this.state.counter);
+        this.countUp();
     }
 
 
