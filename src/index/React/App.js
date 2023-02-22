@@ -5,17 +5,19 @@
 
 // React
 import React from 'react';
-import { Component }  from './components/Component.js';
+import { ClassComponent, FunctionalComponent }  from './components/Component.js';
 
 
 // ====== FUNCTIONS ======
 
 // Main app function 
-function App () {
+function App (props) {
+
     return (
-        <div>
-            <h1>Content goes here</h1>
-            <Component />
+        <div id="reactApp">
+            <h1>{props.title}</h1>
+            <FunctionalComponent title="Functional Component" />
+            <ClassComponent title="Class Component" />
         </div>
     );
 }
